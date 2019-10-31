@@ -1,21 +1,23 @@
 'use strict';
 
+// babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 console.log('App.js is running');
 
 // JSX - Javascript XML
 var template = React.createElement(
-  'h1',
+  'div',
   null,
-  'Does this change?'
+  React.createElement(
+    'h1',
+    null,
+    'Indecision App'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'This is some info'
+  )
 );
-// transformed from babel
-// let template = React.createElement(
-//   'p',
-//   {
-//     id: 'someid'
-//   },
-//   'This is JSX from app.js!'
-// );
 var appRoot = document.querySelector('#app');
 
 ReactDOM.render(template, appRoot);
