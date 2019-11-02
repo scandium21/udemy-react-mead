@@ -1,14 +1,14 @@
 // babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
-console.log("App.js is running");
+console.log('App.js is running');
 
 // practice
 // create app object title/subtitle
 // use title/subtitle in the template
 // render template
-let app = {
-  title: "Indecision app",
-  subtitle: "Put your life in the hands of a computer!",
-  options: ["one", "two"]
+const app = {
+  title: 'Indecision app',
+  subtitle: 'Put your life in the hands of a computer!',
+  options: ['one', 'two']
 };
 
 // practice:
@@ -16,7 +16,7 @@ let app = {
 // conditionally render new p tag - if options.length > 0 "Here are your options" "no options"
 
 // JSX - Javascript XML
-let template = (
+const template = (
   <div>
     <h1>{app.title}</h1>
     {app.subtitle && <p>{app.subtitle}</p>}
@@ -28,25 +28,25 @@ let template = (
   </div>
 );
 
-let appRoot = document.querySelector("#app");
+const appRoot = document.querySelector('#app');
 
-let user = {
-  name: "Nancy",
+const user = {
+  name: 'Nancy',
   age: 47,
-  loc: "New York"
+  loc: 'New York'
 };
-let userName = "Lucy";
-let userAge = 27;
-let userLoc = "Calgary";
+const userName = 'Lucy';
+const userAge = 27;
+const userLoc = 'Calgary';
 
 const getLocation = loc => {
   if (loc) return <p>Location: {loc}</p>;
 };
 // create a templateTwo var JSX expression
-let templateTwo = (
+const templateTwo = (
   <div>
     {/* what goes inside the {any js expression}  */}
-    <h1>{user.name ? user.name : "Anonymous"}</h1>
+    <h1>{user.name ? user.name : 'Anonymous'}</h1>
     {user.age && user.age >= 18 && <p>Age: {user.age}</p>}
     {getLocation(user.loc)}
     {/* the following will not render into anything */}

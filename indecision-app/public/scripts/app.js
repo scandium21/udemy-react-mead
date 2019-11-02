@@ -1,16 +1,16 @@
-"use strict";
+'use strict';
 
 // babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
-console.log("App.js is running");
+console.log('App.js is running');
 
 // practice
 // create app object title/subtitle
 // use title/subtitle in the template
 // render template
 var app = {
-  title: "Indecision app",
-  subtitle: "Put your life in the hands of a computer!",
-  options: ["one", "two"]
+  title: 'Indecision app',
+  subtitle: 'Put your life in the hands of a computer!',
+  options: ['one', 'two']
 };
 
 // practice:
@@ -19,71 +19,71 @@ var app = {
 
 // JSX - Javascript XML
 var template = React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    "h1",
+    'h1',
     null,
     app.title
   ),
   app.subtitle && React.createElement(
-    "p",
+    'p',
     null,
     app.subtitle
   ),
   React.createElement(
-    "p",
+    'p',
     null,
-    app.options.length > 0 ? "Here are your options" : "No options"
+    app.options.length > 0 ? 'Here are your options' : 'No options'
   ),
   React.createElement(
-    "ol",
+    'ol',
     null,
     React.createElement(
-      "li",
+      'li',
       null,
-      "Item One"
+      'Item One'
     ),
     React.createElement(
-      "li",
+      'li',
       null,
-      "Item Two"
+      'Item Two'
     )
   )
 );
 
-var appRoot = document.querySelector("#app");
+var appRoot = document.querySelector('#app');
 
 var user = {
-  name: "Nancy",
+  name: 'Nancy',
   age: 47,
-  loc: "New York"
+  loc: 'New York'
 };
-var userName = "Lucy";
+var userName = 'Lucy';
 var userAge = 27;
-var userLoc = "Calgary";
+var userLoc = 'Calgary';
 
 var getLocation = function getLocation(loc) {
   if (loc) return React.createElement(
-    "p",
+    'p',
     null,
-    "Location: ",
+    'Location: ',
     loc
   );
 };
 // create a templateTwo var JSX expression
 var templateTwo = React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    "h1",
+    'h1',
     null,
-    user.name ? user.name : "Anonymous"
+    user.name ? user.name : 'Anonymous'
   ),
   user.age && user.age >= 18 && React.createElement(
-    "p",
+    'p',
     null,
-    "Age: ",
+    'Age: ',
     user.age
   ),
   getLocation(user.loc),
